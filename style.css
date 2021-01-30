@@ -25,3 +25,9 @@
 .term {
     min-width: fit-content;
 }
+#actor {
+    display: block;
+}
+#action {
+    display: block;
+}
