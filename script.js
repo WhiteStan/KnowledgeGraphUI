@@ -1,25 +1,21 @@
-function script() {
-    var actor = document.querySelector("#actor");
-    var action = document.querySelector("#action");
+import create from './modules/canvas.js';
 
-    function addNewElement(containerName, inputElement) {
-        let newElement = document.createElement('div');
-        newElement.className = 'term';
-        newElement.innerHTML = inputElement.value;
-        inputElement.value = '';
-        let container = document.getElementById(containerName);
-        container.appendChild(newElement);
-    }
+let canvas = create(480, 320);
 
-    actor.addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-            addNewElement('actor-cont', actor)
-        }
-    });
-    action.addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-            addNewElement('action-cont', action)
-        }
-    });
+let actor = document.querySelector("#actor");
+let action = document.querySelector("#action");
+
+function addNewElement(containerName, inputElement) {
+    //TODO
 }
 
+actor.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        addNewElement('actor-cont', actor)
+    }
+});
+action.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        addNewElement('action-cont', action)
+    }
+});
