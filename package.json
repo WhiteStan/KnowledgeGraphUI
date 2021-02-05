@@ -6,14 +6,18 @@
   "dependencies": {
     "css-loader": "^5.0.1",
     "html-webpack-plugin": "^5.0.0",
-    "style-loader": "^2.0.0",
-    "webpack": "^5.20.1",
-    "webpack-cli": "^4.5.0"
+    "http-server": "^0.12.3",
+    "style-loader": "^2.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack": "^5.20.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "serve": "webpack serve --progress --color --config webpack.config.js"
   },
   "repository": {
     "type": "git",

@@ -3,7 +3,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    index: path.resolve(__dirname, './script.js') 
+    index: path.resolve(__dirname, './script.js')
   },
   output: {
     path: path.resolve(__dirname, './build'),
@@ -25,5 +25,8 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
+  },
+  devServer: {
+    contentBase: __dirname + "/build/",
   }
 }
