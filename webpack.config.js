@@ -4,11 +4,23 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
-    index: path.resolve(__dirname, './script.js')
+    index: path.resolve(__dirname, './index.js')
   },
   output: {
     path: path.resolve(__dirname, './build'),
     filename: '[name].bunde.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx'],
   },
   plugins: [
     new HTMLWebpackPlugin({

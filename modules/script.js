@@ -1,5 +1,6 @@
 import create from './modules/canvas.js';
 import drawRect from './modules/rectang.js';
+
 let canvas = create(480, 320);
 
 let lastSquareActor;
